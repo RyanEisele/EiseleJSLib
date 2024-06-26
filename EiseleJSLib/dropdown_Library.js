@@ -133,6 +133,12 @@ function getQuarter() {
 
  };
 
+ function rpmTooltip (indID, toolTip){
+    const infoIcon = `<i class="bi bi-info-circle" data-toggle="tooltip" title="${toolTip}"></i>`
+    $(`label[for=${indID}]`).append(infoIcon);
+      $('[data-toggle="tooltip"]').tooltip();
+    }  
+
 
 
 
