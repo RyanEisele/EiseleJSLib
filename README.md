@@ -19,9 +19,7 @@ Example of changing data in record
 
         },
         success: function(response) {
-        	/*const letRecordID = parseFloat(response);
-            console.log(letRecordID);*/
-             alert("it worked");
+        	/*const letRecordID = parseFloat(response)
 	
     /*      if(!isNaN(letRecordID)) && isFinite(letRecordID)) && letRecordID) != 0) {
         	//window.location = 'index.php?a=view&recordID=' + recordID;
