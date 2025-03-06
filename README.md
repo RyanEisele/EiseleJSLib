@@ -66,7 +66,30 @@ Example of starting new request
     });   
     
 }
+```
 
+Example of submit record
+
+```javaScript
+$.ajax({
+            type: 'POST',
+            url: "https://leaf.va.gov/VBA/RPM/VICTOR/api/form/" + getRecordID + "/submit",
+            data: {
+                CSRFToken: '<!--{$CSRFToken}-->',
+                //dependencyID: 21,       // This is the ID for the requirement within the workflow's step
+                //stepID: 0,
+               //actionType: 'Requestor clicks submit',  // This is a unique ID for the action. Confirm by checking the action in the workflow: "...clicks [actionType]"
+               // comment: 'No Action Needed'
+            },
+  			success: function(response) {
+
+            },
+  			error: function(xhr, status, error) {
+            console.log('Error:', status, error);                 
+            }
+            });  
+   
+}      
 
 
 ```
