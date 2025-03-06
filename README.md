@@ -35,3 +35,39 @@ Example of changing data in record
 }    
 
 ```
+Example of starting new request
+
+```JavaScript
+ $.ajax({
+    	type: 'POST',
+        url: 'https://leaf.va.gov/VBA/335/stpaul_finance_request/api/?a=form/new',
+        dataType: 'json',
+        data: {service: '', // Either a service ID # or leave blank
+                  title: 'From Modal Test', // Arbitrary title for the request
+                  priority: 0,
+                  numform_5e189: 1, // Form ID is listed in the form editor
+                 CSRFToken: '<!--{$CSRFToken}-->',
+                  6: reqData.userInit, // requester Name 
+                  
+        },
+        success: function(response) {
+        	const letRecordID = parseFloat(response);
+       
+	
+    /*      if(!isNaN(letRecordID)) && isFinite(letRecordID)) && letRecordID) != 0) {
+        	//window.location = 'index.php?a=view&recordID=' + recordID;
+         
+        	}
+        	else {
+        		alert(response + '\n\nPlease contact your system administrator.');
+        	} */
+        },
+        cache: false
+    });   
+    
+}
+
+
+
+```
+
