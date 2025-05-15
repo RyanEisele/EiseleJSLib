@@ -1,3 +1,9 @@
+how to make pages with from anysite 
+```javascript
+
+query.setRootURL('URL');
+```
+
 Example of changing data in record
 ```javascript
  $.ajax({
