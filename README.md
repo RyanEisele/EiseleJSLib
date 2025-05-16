@@ -99,4 +99,30 @@ $.ajax({
 
 
 ```
+push record to diffrent step
+
+```javaScript
+$.ajax({
+            type: 'POST',
+            url: `./api/formWorkflow/${getRecordID}/apply`,
+            data: {
+                CSRFToken: '<!--{$CSRFToken}-->',
+                dependencyID: 21,       // This is the ID for the requirement within the workflow's step
+                actionType: 'NoActionNeeded',  // This is a unique ID for the action. Confirm by checking the action in the workflow: "...clicks [actionType]"
+                comment: comment
+            },
+  			success: function(response) {
+            console.log('Success:', response);
+             $('#tr' + getRecordID).fadeOut();    
+           // main();
+            },
+  			error: function(xhr, status, error) {
+            console.log('Error:', status, error);                 
+            }
+            });  
+
+
+```
+
+
 
